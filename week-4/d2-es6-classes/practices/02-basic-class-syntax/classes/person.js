@@ -11,12 +11,14 @@ class Person {
 
   static introducePeople(array) {
     if (!Array.isArray(array)) {
-      return console.log("introducePeople only takes an array as an argument.")
+      console.log("introducePeople only takes an array as an argument.")
+      return;
     }
 
     for (let i = 0; i < array.length; i++) {
       if (!(array[i] instanceof Person)) {
-        return console.log("All items in array must be Person class instances.")
+        console.log("All items in array must be Person class instances.")
+        return;
       }
     }
 
