@@ -1,5 +1,5 @@
 // Convert restSum into a multi-line fat-arrow function
-const restSum = function(...otherNums) {
+const restSum = (...otherNums) => {
   let sum = otherNums.reduce((acc, el) => (acc += el));
   return sum;
 };
@@ -7,7 +7,7 @@ console.log('restSum output:');
 console.log(restSum(1, 2, 3)); // 6
 
 // Convert getFullName into a one-liner fat-arrow function with implicit return
-const getFullName = function(person) {
+const getFullName = (person) => {
   person.firstName + " " + person.lastName;
 };
 
@@ -31,7 +31,7 @@ console.log(addFive(3)); // 8
 
 // Convert coupon and the function it returns into fat-arrow functions
 function coupon(discount) {
-  return function(prices) {
+  return (prices) => {
     return prices.map((price) => (price -= price * discount));
   };
 }
