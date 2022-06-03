@@ -8,7 +8,7 @@ let word = new Word('hello')
 describe("Word", function () {
   describe("Word constructor function", function () {
     it('should have a "word" property', function () {
-      expect(word).to.have.all.keys('word');
+      expect(word).to.have.property('word');
     });
 
     it('should set the "word" property when a new word is created', function () {
