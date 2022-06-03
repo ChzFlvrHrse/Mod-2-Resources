@@ -16,9 +16,8 @@ function myRange(min, max, step = 1) {
       array.push(min + i)
     }
     return array;
-  } else {
-    return [];
   }
+  return array;
 }
 
 
