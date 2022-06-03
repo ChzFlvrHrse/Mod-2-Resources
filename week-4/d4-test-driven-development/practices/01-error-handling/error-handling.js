@@ -5,13 +5,15 @@ function sum(array) {
     for (let i = 0; i < array.length; i++) {
       sum += array[i];
     }
-  } catch (e) {
-    throw new Error("Argument must be an array");
+  } catch (error) {
+    if (error instanceof TypeError) {
+      console.error(error.message)
+    } else throw error;
   }
   return sum;
 }
 
-console.log(sum([1, 2, 3])) // prints 6
+// console.log(sum([1, 2, 3])) // prints 6
 let res = sum(null);
 console.log(res); // throws error
 
@@ -24,8 +26,8 @@ function sayName(name) {
       throw new TypeError("Argument must be string")
   }
 }
-console.log(sayName("Alex"));
-console.log(sayName(1));
+// console.log(sayName("Alex"));
+// console.log(sayName(1));
 
 // 3.
 function greet(greeting) {
@@ -35,5 +37,5 @@ function greet(greeting) {
   return greeting;
 }
 
-console.log(greet("Hello there!")) // prints greeting
-console.log(greet()) // throws error
+// console.log(greet("Hello there!")) // prints greeting
+// console.log(greet()) // throws error
