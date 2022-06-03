@@ -5,9 +5,8 @@ function isFive(num) {
 function isOdd(number) {
   if (typeof number === 'number') {
     return number % 2 !== 0;
-  } else {
-    throw new Error("Argument must be a number")
   }
+  throw new Error("Argument must be a number")
 }
 
 function myRange(min, max, step = 1) {
