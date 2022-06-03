@@ -12,8 +12,8 @@ function isOdd(number) {
 function myRange(min, max, step = 1) {
   let array = [];
   if (min < max) {
-    for (let i = 0; i <= max; i+=step) {
-      array.push(min + i)
+    for (let i = min; i <= max; i+=step) {
+      array.push(i)
     }
     return array;
   }
