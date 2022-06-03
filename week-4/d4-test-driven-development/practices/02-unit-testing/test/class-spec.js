@@ -30,6 +30,8 @@ describe("Word", function () {
 
   describe("pigLatin function", function () {
     it("should return the word converted to pig latin", function () {
+      let word2 = new Word('apple');
+      expect(word2.pigLatin()).to.equal('appleyay')
       expect(word.pigLatin()).to.equal('ellohay');
     });
   });
