@@ -12,7 +12,7 @@ function addNums(n) {
 function addManyNums(n) {
   let count = 0;
   for (let i = 0; i <= n; i++) {
-    count += addNums(i)
+    count += addNums(i);
   }
   return count;
 }
