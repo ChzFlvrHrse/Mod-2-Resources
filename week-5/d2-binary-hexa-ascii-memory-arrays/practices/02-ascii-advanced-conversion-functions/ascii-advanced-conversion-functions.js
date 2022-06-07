@@ -9,12 +9,14 @@ Consult documentation on how to utilize the following methods:
 
 /* Base 2 to base 16 */
 function binaryToHexadecimal(blob) {
-  // Your code here
+  let num = Number(blob);
+  return `0x${num.toString(16)}`
 }
 
 /* Base 16 to base 2 */
 function hexadecimalToBinary(blob) {
-  // Your code here
+  let num = Number(blob);
+  return `0b${num.toString(2)}`
 }
 
 /* Base 10 to ASCII */
