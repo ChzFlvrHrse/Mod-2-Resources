@@ -41,7 +41,6 @@ class DynamicArray {
     }
     this.data[0] = val;
     this.length++
-    // this.resize();
   }
 
   indexOf(val) {
