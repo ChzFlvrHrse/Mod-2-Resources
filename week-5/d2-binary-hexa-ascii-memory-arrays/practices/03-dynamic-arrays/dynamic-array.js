@@ -10,7 +10,7 @@ class DynamicArray {
 
   read(index) {
     if (index >= this.length) {
-      return undefined;
+      return undefined; 
     }
     return this.data[index];
   }
