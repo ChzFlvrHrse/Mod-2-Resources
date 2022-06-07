@@ -21,22 +21,27 @@ function hexadecimalToBinary(blob) {
 
 /* Base 10 to ASCII */
 function decimalToAscii(blob) {
-  // Your code here
+  return String.fromCharCode(blob)
 }
 
 /* Base 2 to ASCII */
 function binaryToAscii(blob) {
-  // Your code here
+  let num = Number(blob);
+  return String.fromCharCode(num);
 }
 
 /* Base 16 to ASCII */
 function hexadecimalToAscii(blob) {
-  // Your code here
+  let num = Number(blob);
+  return String.fromCharCode(num);
 }
 
 /* ASCII to base 10 */
 function asciiToDecimal(blob) {
-  // Your code here
+  let array = blob.split("");
+  return array.map((letter) => {
+    return letter.charCodeAt();
+  })
 }
 
 // console.log('Binary to hexadecimal:')
