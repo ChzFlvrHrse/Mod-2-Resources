@@ -40,16 +40,28 @@ class HashTable {
     let index = this.hashMod(key);
     if (this.data[index]) {
       newPair.next = this.data[index];
-      this.data[index] = newPair;
     }
     this.data[index] = newPair;
     this.count++;
   }
 
   insert(key, value) {
-    // Your code here
+    let newPair = new KeyValuePair(key, value);
+    let index = this.hashMod(key);
+    if (this.data[index]) {
+      let curr = this.data[index];
+      while(curr) {
+        if (curr.key === key) {
+          curr.value = value;
+          return
+        }
+        curr = curr.next
+      }
+    }
+    newPair.next = this.data[index];
+    this.data[index] = newPair;
+    this.count++;
   }
-
 }
 
 
