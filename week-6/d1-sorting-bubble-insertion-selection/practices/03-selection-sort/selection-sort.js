@@ -29,7 +29,9 @@ function selectionSortInPlace(arr) {
     // Find the index of the minimum value in the unsorted half
     let minIndex = div;
     for (let i = div + 1; i < arr.length; i++) {
-      if (arr[i] < arr[minIndex]) minIndex = i;
+      if (arr[i] < arr[minIndex]) {
+        minIndex = i;
+      }
     }
 
     // Save the min value
