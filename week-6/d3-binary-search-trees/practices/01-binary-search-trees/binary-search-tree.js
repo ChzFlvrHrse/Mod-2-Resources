@@ -71,8 +71,7 @@ class BinarySearchTree {
   breadthFirstTraversal() {
     if (!this.root) return;
 
-    let queue = [];
-    queue.push(this.root)
+    let queue = [this.root];
 
     while (queue.length) {
       let node = queue.shift();
