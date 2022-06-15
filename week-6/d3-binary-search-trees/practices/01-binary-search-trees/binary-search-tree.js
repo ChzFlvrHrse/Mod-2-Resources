@@ -61,12 +61,30 @@ class BinarySearchTree {
 
 
   postOrderTraversal(currentNode = this.root) {
-    // Your code here
+    if (!currentNode) return;
+    this.postOrderTraversal(currentNode.left);
+    this.postOrderTraversal(currentNode.right)
+    console.log(currentNode.val);
   }
 
     // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
-    // your code here
+    if (!this.root) return;
+
+    let queue = [];
+    queue.push(this.root)
+
+    while (queue.length) {
+      let node = queue.shift();
+      console.log(node.val);
+
+      if (node.left) {
+        queue.push(node.left)
+      }
+      if (node.right) {
+        queue.push(node.right)
+      }
+    }
   }
 
   // Depth First Traversal - Iterative
