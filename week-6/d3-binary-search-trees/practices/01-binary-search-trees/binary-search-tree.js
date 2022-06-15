@@ -91,8 +91,7 @@ class BinarySearchTree {
   depthFirstTraversal() {
     if (!this.root) return;
 
-    let stack = [];
-    stack.unshift(this.root)
+    let stack = [this.root];
 
     while (stack.length) {
       let node = stack.pop();
@@ -105,7 +104,7 @@ class BinarySearchTree {
         stack.push(node.right)
       }
     }
-}
+  }
 }
 
 module.exports = { BinarySearchTree, TreeNode };
