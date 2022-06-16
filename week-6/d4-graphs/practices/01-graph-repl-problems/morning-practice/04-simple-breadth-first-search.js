@@ -8,7 +8,24 @@ const adjList = {
 }
 
 function breadthFirstSearch(start, end) {
-  // Your code here
+  let queue = [start];
+  let set = new Set();
+  set.add(start);
+
+  while (queue.length) {
+    let curr = queue.shift();
+
+    for (let i = 0; i < adjList[curr].length; i++) {
+      let el = adjList[curr][i]
+      if (el === end) {
+        return true;
+      } else if (!set.has(el)) {
+        set.add(el);
+        queue.push(el);
+      }
+    }
+  }
+  return false;
 }
 
 console.log("First Test:");
